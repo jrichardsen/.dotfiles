@@ -8,6 +8,7 @@ return {
         timeout_ms = 5000,
       },
       servers = {
+        rust_analyzer = {},
         texlab = {
           settings = {
             texlab = {

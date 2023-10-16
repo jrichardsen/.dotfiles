@@ -108,11 +108,11 @@ alias vim="nvim"
 alias neo="setxkbmap de neo_qwertz"
 alias noneo="setxkbmap de"
 
-export PATH=$PATH:~/bin
-. "$HOME/.cargo/env"
-
-export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux
-export PATH=$PATH:~/bin/
+if [ -e "$HOME/.cargo/env" ]
+then
+    . "$HOME/.cargo/env"
+fi
 
 ssh-add ~/.ssh/atw_goettingen 2> /dev/null
 
+eval "$(direnv hook zsh)"
